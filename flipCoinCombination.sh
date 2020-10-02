@@ -1,7 +1,7 @@
 #!/bin/bash
 
 declare -A dict1
-delcare -A dict2
+declare -A dict2
 
 echo "Welcome to Flip Coin Combination Problem"
 echo "Enter the number of times you would like to flip:"
