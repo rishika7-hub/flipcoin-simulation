@@ -1,6 +1,7 @@
 #!/bin/bash
 
 declare -A dict1
+delcare -A dict2
 
 echo "Welcome to Flip Coin Combination Problem"
 echo "Enter the number of times you would like to flip:"
@@ -41,3 +42,37 @@ percentage_of_head=$(( $count1 * 5))
 percentage_of_tail=$(( $count2 * 5)) 
 ;;
 
+#hh-1 tt-2 ht-3 th-4
+
+
+"2.")
+for ((i=1; i<=$n; i++ ))
+do
+num1=$(( 1 + $RANDOM % 4 ))
+if [ $num1 -eq 1 ]
+then
+	echo "HH"
+	let counthh++
+elif [ $num1 -eq 2 ]
+then 
+	echo "TT"
+	let counttt++
+elif [ $num1 -eq 3 ]
+then
+	echo "HT"
+	letcountht++
+else [ $num1 -eq 4 ]
+	echo "TH"
+	let countth++
+fi
+done
+dict2[HH]="$counthh"
+dict2[TT]="$counttt"
+dict2[HT]="$countht"
+dict2[TH]="$countth"
+
+percentage_of_hh=$(( $counthh * 5 ))
+percentage_of_tt=$(( $counttt * 5 ))
+percentage_of_ht=$(( $countht * 5 ))
+percentage_of_th=$(( $countth * 5 ))
+;;
