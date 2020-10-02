@@ -8,3 +8,11 @@ echo "2.Doublet"
 echo "3.Triplet"
 read option
 
+num=$(( $RANDOM % 2 ))
+if [ $num -eq 0 ]
+then
+	echo "Head"
+else
+	echo "Tail"
+fi
+
